@@ -9,3 +9,4 @@ screen.title("PONG")
 screen.listen()
 
 screen.exitonclick()
+screen.listen()
