@@ -22,6 +22,8 @@ screen.onkey(right_paddle.go_up,"Up")
 screen.onkey(right_paddle.go_down, "Down")
 screen.onkey(left_paddle.go_up,"w")
 screen.onkey(left_paddle.go_down, "s")
+
+
 game_is_on = True
 while game_is_on:
     time.sleep(ball.move_speed)
@@ -42,5 +44,9 @@ while game_is_on:
         ball.reset_position()
         scoreboard.right_point()
 
-screen.exitonclick()
+    if scoreboard.right_score == 10 or scoreboard.left_score == 10:
+        game_is_on = False
+        screen.exitonclick()
+
+
 
